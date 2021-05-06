@@ -6,6 +6,7 @@ export default class Api {
 
   static CASE_ENDP: string = `${Api.BASE_URL}case`;
   static CASE_SUM_ENDP: string = `${Api.BASE_URL}case-summary`;
+  static COUNTRIES_ENDP: string = `${Api.BASE_URL}countries`;
 
   static GetCases = (params?: any) => {
     let queryString: string = params
@@ -19,5 +20,9 @@ export default class Api {
       ? `?${new URLSearchParams(params).toString()}`
       : "";
     return axios.get(`${Api.CASE_SUM_ENDP}${queryString}`);
+  };
+
+  static GetCountries = () => {
+    return axios.get(Api.COUNTRIES_ENDP);
   };
 }
