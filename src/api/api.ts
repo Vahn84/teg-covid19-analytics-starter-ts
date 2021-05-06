@@ -1,3 +1,47 @@
+/* 
+
+ENDPOINTS 
+
+[GET] /case?country=SGP
+[GET] /case?country=SGP&from=08/01/2020
+[GET] /case?country=SGP&from=08/01/2020&to=21/01/2021
+
+[GET] /case-summary
+[GET] /case-summary?country=SGP
+[GET] /case-summary?country=SGP&from=08/01/2020
+[GET] /case-summary?country=SGP&from=08/01/2020&to=21/01/2021
+
+[POST] /case
+{
+         "yearWeek" : "2021/08/01",
+         "casesWeekly" : 8,
+         "deathsWeekly" : 8,
+         "countriesAndTerritories" : "Afghanistan",
+         "geoId" : "AF",
+         "countryTerritoryCode" : "AFG",
+         "popData2019" : 38041757,
+         "continentExp" : "Asia",
+         "notificationRate" : "1.33"
+}
+
+[PUT] /case
+{
+    "id": XXXXXXX,
+         "yearWeek" : "2021/08/01",
+         "casesWeekly" : 8,
+         "deathsWeekly" : 8,
+         "countriesAndTerritories" : "Afghanistan",
+         "geoId" : "AF",
+         "countryTerritoryCode" : "AFG",
+         "popData2019" : 38041757,
+         "continentExp" : "Asia",
+         "notificationRate" : "1.33"
+}
+
+[DELETE] /case/13
+
+*/
+
 import axios from "axios";
 
 export default class Api {
